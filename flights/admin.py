@@ -6,7 +6,7 @@ from .models import Airport, Flight, Passenger
 
 class PassengerInline(admin.StackedInline):
     model = Passenger.flights.through
-    extra = 1
+    extra = 2
 
 class FlightAdmin(admin.ModelAdmin):
     inlines = [PassengerInline]
